@@ -28,14 +28,17 @@ from utils.load import export_to_csv
 
 
 if __name__ == "__main__":
-    extractor = WebExtractor()
-    urls = [f"https://fashion-studio.dicoding.dev/page{i}" for i in range(10, 14)]
-    results = asyncio.run(extractor.get_all(urls))
-    print(results)
-    print(len(results))
+    # extractor = WebExtractor()
+    # urls = [f"https://fashion-studio.dicoding.dev/page{i}" for i in range(10, 14)]
+    # results = asyncio.run(extractor.get_all(urls))
+    # print(results)
+    # print(len(results))
 
-    df = pandas.DataFrame(results)
-    transformer = Transformer()
-    results = transformer.clean(df)
+    # df = pandas.DataFrame(results)
+    # transformer = Transformer()
+    # results = transformer.clean(df)
 
-    results.to_csv("fashionstudio.csv", index=False)
+    # results.to_csv("fashionstudio.csv", index=False)
+    from tests.test_extract import TestWebExtractorAsync
+
+    TestWebExtractorAsync().test_get_all()
