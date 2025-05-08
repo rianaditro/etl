@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup as bs
 
 from utils.extract import WebExtractor
 
+
 class TestWebExtractor:
     @pytest.fixture(autouse=True)
     def setup(self):

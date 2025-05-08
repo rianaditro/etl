@@ -19,8 +19,8 @@ class Transformer:
     def convert_type(self, df: pd.DataFrame):
         try:
             df["Rating"] = pd.to_numeric(df["Rating"])
-        except ValueError:
-            print("Error: Could not convert Rating column to numeric")
+        except ValueError as e:
+            raise ValueError("Could not convert Rating column to numeric") from e
         return df
     
     def clean(self, df: pd.DataFrame):
