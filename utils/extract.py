@@ -85,6 +85,9 @@ class WebExtractor:
             # Add timestamp
             data["Timestamp"] = datetime.datetime.now()
 
+            # Convert to rupiah
+            data["Price"] = int(data["Price"]) * 16000
+
         except Exception as e:
             print(f"Failed to extract data from card. Error: {e}")
             print(title, price, details, data)

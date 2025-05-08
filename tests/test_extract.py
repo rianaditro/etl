@@ -15,7 +15,7 @@ class TestWebExtractor:
         <div id="collectionList">
             <div class="collection-card">
                 <h3 class="product-title">Product Title</h3>
-                <div class="price-container">Price</div>
+                <div class="price-container">20</div>
                 <p>Rating: ⭐ 4.8 / 5</p>
                 <p>Colors: 5</p>
                 <p>Size: M</p>
@@ -35,7 +35,7 @@ class TestWebExtractor:
     def test_get_data_card(self):
         data = self.extractor.get_data_card(self.card)
         assert data["Title"] == "Product Title"
-        assert data["Price"] == "Price"
+        assert data["Price"] == 320000
         assert data["Rating"] == "4.8"
         assert data["Colors"] == "5"
         assert data["Size"] == "M"
