@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
         main_url = "https://fashion-studio.dicoding.dev"
 
-        urls = [f"{main_url}/page{i}" for i in range(7, 10)]
+        urls = [f"{main_url}/page{i}" for i in range(2, 51)]
         urls.append(main_url)
         
         results = asyncio.run(extractor.get_all(urls))
