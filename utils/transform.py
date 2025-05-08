@@ -25,5 +25,6 @@ class Transformer:
     
     def clean(self, df: pd.DataFrame):
         df = self.remove_dirty(df)
+        df.dropna(inplace=True, how="all")
         return self.convert_type(df)
         
